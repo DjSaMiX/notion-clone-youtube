@@ -6,6 +6,12 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+  {
+    rules: {
+      "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+    }
+  },
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
